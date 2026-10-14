@@ -110,7 +110,7 @@
             border-color: var(--primary-color);
         }
 
-        /* --- SECCIONES Y PESTAÑAS (CONTROL DE VISIBILIDAD) --- */
+        /* --- SECCIONES Y PESTAÑAS (VISIBILIDAD CONTROLADA) --- */
         .tab-content {
             display: none !important;
         }
@@ -197,6 +197,7 @@
         <button class="tab-btn" onclick="switchTab('kicad', this)">KiCad</button>
         <button class="tab-btn" onclick="switchTab('mods', this)">Mods</button>
         <button class="tab-btn" onclick="switchTab('monofab', this)">MonoFab</button>
+        <button class="tab-btn" onclick="switchTab('multisim', this)">Multisim</button>
         <button class="tab-btn" onclick="switchTab('acerca', this)">Acerca de mí</button>
     </nav>
 
@@ -216,10 +217,10 @@
                 
                 <h4 style="color: var(--primary-color); margin-top: 1rem;">Áreas de Competencia y Tecnologías:</h4>
                 <ul>
-                    <li><strong>Programación y Modelado:</strong> Desarrollo de software y algoritmos en Python y C/C++ para modelado matemático, operaciones matriciales y sistemas automatizados (como sistemas de votación en C).</li>
+                    <li><strong>Programación y Modelado:</strong> Desarrollo de software y algoritmos en Python y C/C++ para modelado matemático, operaciones matriciales y sistemas automatizados.</li>
                     <li><strong>Diseño Mecánico y CAD:</strong> Experiencia en el uso de software de diseño avanzado como CATIA V5 e impresión 3D (operación y mantenimiento de equipos como Ender 3 Pro con laminadores como PrusaSlicer y Cura).</li>
                     <li><strong>Electrónica y Hardware:</strong> Trabajo práctico con microcontroladores (módulos ESP32), sensores (IMUs MPU-6050/9250, amplificadores HX711 para celdas de carga), drivers de motores (TB6612FNG) y visión artificial mediante OpenCV (Python).</li>
-                    <li><strong>Simulación y Procesos:</strong> Elaboración de modelos de simulación en MATLAB para optimización de parámetros (por ejemplo, inyección de plásticos en ABS para la industria automotriz) y análisis de ingeniería verde.</li>
+                    <li><strong>Simulación y Procesos:</strong> Elaboración de modelos de simulación en MATLAB y NI Multisim para optimización de parámetros y validación virtual de circuitos analógicos y digitales.</li>
                 </ul>
 
                 <p style="margin-top: 1rem;">Mi objetivo profesional es integrarme a proyectos de alta exigencia tecnológica donde pueda aportar capacidad analítica, resolución de problemas complejos y un enfoque práctico en el desarrollo de sistemas mecatrónicos innovadores.</p>
@@ -232,7 +233,6 @@
                 <input type="text" onkeyup="filterCards(this)" placeholder="🔍 Buscar en KiCad...">
             </div>
 
-            <!-- KiCad Resumen -->
             <article class="card searchable">
                 <span class="badge">KiCad</span>
                 <h3>Resumen: ¿Qué es KiCad?</h3>
@@ -241,7 +241,6 @@
                 <span class="date">Fuente: https://www.kicad.org/about/kicad/</span>
             </article>
 
-            <!-- 2. Menú principal -->
             <article class="card searchable">
                 <span class="badge">Menu</span>
                 <h3>Menu principal de KiCad</h3>
@@ -250,7 +249,6 @@
                 <p>Además de eso tambien encontramos los menus usuales de "Archivo" donde podemos encontrar para abrir, guardar o clonar algun documento que tengamos; "Editar"para copiar, pegar o cortar; o "Herramientas" entre otras; como es usual encontrar en cualquier aplicación con creación de archivos.</p>
             </article>
 
-            <!-- 3. Librería -->
             <article class="card searchable">
                 <span class="badge">KidCad FabLib</span>
                 <h3>¿Cómo instalar KidCad FabLib?</h3>
@@ -260,7 +258,6 @@
                 <p>En dicho menu vamos a buscar en el filtro la libreria de "KidCd FabLib" y la instalamos. Una vez instalada vamos a reiniciar el programa para asegurarnos de poder utilizar esta libreria.</p>
             </article>
 
-            <!-- 4. Editor de esquemas -->
             <article class="card searchable">
                 <span class="badge">Esquemas</span>
                 <h3>Editor de esquemas</h3>
@@ -269,7 +266,6 @@
                 <p>Una vez abierto nos desplegara la ventana de la anterior imagen, en donde podremos crear, editar y conectar todos nuestros diagramas para realizar un circuito.</p>
             </article>
         
-            <!-- 5. Herramientas de esquemas -->
             <article class="card searchable">
                 <span class="badge">HerramientasE</span>
                 <h3>Herramientas del editor de esquemas</h3>
@@ -277,7 +273,6 @@
                 <p>En la barra lateral dentro del editor de esquemás podemos observar diversas herramientas las cuales nos pueden ayudar a identificar e insertar los elementos necesarios para nuestro diagrama</p>
             </article>
         
-            <!-- 6. Componentes -->
             <article class="card searchable">
                 <span class="badge">Componentes</span>
                 <h3>¿Cómo agregar un componente?</h3>
@@ -289,7 +284,6 @@
                 <img src="Imagen8.png" alt="Imagen">
             </article>
         
-            <!-- 7. Editor de placas -->
             <article class="card searchable">
                 <span class="badge">Placas</span>
                 <h3>Editor de Placas</h3>
@@ -297,7 +291,6 @@
                 <p>Por otro lado tenemos tambien el editor de placas el cual, al igual que el editor de esquemas, podemos abrir desde el menu lateral en el inicio o en la barra de Herramientas en la parte superior, pero a su vez tambien podemos ingresar desde el editor de esquemas al pulsar el icono señalado en la siguiente imamgen.</p>
             </article>
         
-            <!-- 8. Importar componentes -->
             <article class="card searchable">
                 <span class="badge">Componentes</span>
                 <h3>¿Cómo importar los componentes del editor de esquemas?</h3>
@@ -305,7 +298,6 @@
                 <p>Al ya tener abierta la pestaña del editor de placas vamos a necesitar insertar los componentes del diagrama que ya creamos con anterioridad. Para esto vamos a buscar el icono de "Actualizar placa desde esquema" el cual nos va a abrir otra ventanita en la cual vamos a picar el boton de "Actualizar placa", con lo que ya tendriamos nuestros componentes inserador en esta"</p>
             </article>
         
-            <!-- 9. Herramientas de placas -->
             <article class="card searchable">
                 <span class="badge">HerramientasP</span>
                 <h3>Herramientas del editor de placas</h3>
@@ -317,7 +309,6 @@
                 <img src="Imagen13.png" alt="Imagen">
             </article>
 
-            <!-- 10. Exportar -->
             <article class="card searchable">
                 <span class="badge">Exportar</span>
                 <h3>¿Cómo exportar los archivos a gerber?</h3>
@@ -337,110 +328,105 @@
                 <input type="text" onkeyup="filterCards(this)" placeholder="🔍 Buscar en Mods...">
             </div>
 
-            <!-- Resumen Mods -->
             <article class="card searchable">
                 <span class="badge">Mods</span>
-                <h3>Resumen: ¿Qué es Mods CE?</h3>
+                <h3>Resumen: Plataforma Mods CE</h3>
+                <img src="mods_logo.png" alt="Logo de Mods" style="width: 100%; max-width: 320px; height: auto; margin: 20px auto; display: block; border-radius: 12px;">
                 <p>Mods CE (Community Edition) es una herramienta web desarrollada para laboratorios de fabricación (FabLabs). Funciona mediante bloques interconectados y nos permite preparar proyectos de corte y grabado, calcular las rutas de las fresas y generar los archivos necesarios para máquinas CNC como la Roland SRM-20 sin complicaciones.</p>
                 <span class="date">Fuente: https://gitlab.fabcloud.org/pub/project/mods/#what-is-mods</span>
             </article>
 
-            <!-- Paso 1 -->
             <article class="card searchable">
-                <span class="badge">Acceso</span>
-                <h3>Entrada a la página de Mods</h3>
-                <img src="mods1.jpeg" alt="Entrada a la página de mods">
+                <span class="badge">Inicio</span>
+                <h3>Acceso a la herramienta de Mods</h3>
+                <img src="mods1.jpeg" alt="Acceso a la plataforma Mods">
                 <p>Para comenzar el proceso, abrimos el navegador e ingresamos a la página oficial de Mods Community Edition para cargar la zona de trabajo.</p>
             </article>
 
-            <!-- Paso 2 -->
             <article class="card searchable">
                 <span class="badge">Menú</span>
-                <h3>Menú de programas</h3>
-                <img src="mods2.jpeg" alt="Vista inicial de mods y menú Programs">
-                <p>Una vez dentro de la pantalla principal, nos dirigimos a la pestaña superior para abrir la lista de configuraciones y programas disponibles en la plataforma.</p>
+                <h3>Página principal y menú Programs</h3>
+                <img src="mods2.jpeg" alt="Vista inicial y menú Programs">
+                <p>Una vez dentro de la pantalla principal, nos dirigimos a la pestaña superior izquierda para abrir la lista de configuraciones y programas disponibles en la plataforma.</p>
             </article>
 
-            <!-- Paso 3 -->
             <article class="card searchable">
                 <span class="badge">Configuración</span>
-                <h3>Selección del programa para la fresadora</h3>
-                <img src="mods3.jpeg" alt="Buscador de programas SRM-20 mill 2D PCB">
-                <p>En el buscador escribimos el modelo de la máquina y elegimos la opción de fresado 2D para PCB, que es la que se adapta a nuestra Roland monoFab.</p>
+                <h3>Búsqueda de SRM-20 mill</h3>
+                <img src="Image (17).jpg" alt="Buscador de programas SRM-20 mill 2D PCB">
+                <p>En el buscador escribimos el modelo de la máquina y elegimos la opción de fresado 2D para PCB, que es la plantilla que se adapta a nuestra fresadora Roland monoFab SRM-20.</p>
             </article>
 
-            <!-- Paso 4 -->
             <article class="card searchable">
                 <span class="badge">Flujo de trabajo</span>
                 <h3>Módulos de trabajo conectados</h3>
-                <img src="mods4.jpeg" alt="Pestañas y módulos activos para Roland Monofab PCB">
-                <p>Al abrir el programa, la pantalla nos muestra un diagrama con varios bloques conectados en serie. Estos módulos nos guiarán paso a paso, desde importar el diseño hasta generar el archivo de corte.</p>
+                <img src="Image (3).jpg" alt="Pestañas y módulos activos">
+                <p>Al abrir el programa se despliega el lienzo con todos los bloques conectados en serie. En estas pestañas seleccionaremos los elementos y parámetros con los que vamos a trabajar.</p>
             </article>
 
-            <!-- Paso 5 -->
             <article class="card searchable">
-                <span class="badge">Archivos</span>
-                <h3>Cargar el archivo de contorno</h3>
-                <img src="mods5.jpeg" alt="Seleccionar archivo SVG de Edge Cuts">
-                <p>Buscamos y seleccionamos el archivo SVG con el contorno de nuestra placa (Edge Cuts), el cual exportamos previamente desde KiCad para definir la forma exterior.</p>
+                <span class="badge">Flujo de trabajo</span>
+                <h3>Identificación de pestañas y bloques principales</h3>
+                <img src="Image (4).jpg" alt="Esquema general de módulos para la Roland">
+                <p>Identificamos los módulos esenciales del flujo: desde la entrada de los archivos vectoriales (read SVG), la conversión a imagen y el cálculo del ancho de pasada, hasta la salida de coordenadas para la máquina.</p>
             </article>
 
-            <!-- Paso 6 -->
             <article class="card searchable">
-                <span class="badge">Herramienta</span>
-                <h3>Elección de la fresa</h3>
-                <img src="mods6.jpeg" alt="Selección de corte y tamaño de fresa">
-                <p>Elegimos la medida de broca que más se acerque a la que vamos a usar en la máquina física, dejando los parámetros base listos para ajustarse.</p>
+                <span class="badge">Pistas</span>
+                <h3>Carga del archivo de pistas (F_Cu)</h3>
+                <img src="Image (1).jpg" alt="Selección del archivo hola mundo-F_Cu.svg">
+                <p>En el módulo read SVG hacemos clic en "select SVG file" y cargamos el archivo vectorial correspondiente al cobre (hola mundo-F_Cu.svg) exportado desde KiCad.</p>
             </article>
 
-            <!-- Paso 7 -->
             <article class="card searchable">
-                <span class="badge">Parámetros</span>
-                <h3>Ajuste de medidas y velocidad</h3>
-                <img src="mods7.jpeg" alt="Parámetros de corte y velocidad">
-                <p>Configuramos los datos clave para el corte exterior: ingresamos el grosor real de la punta, cuántas pasadas dará la máquina, el punto de inicio (origen cero) y la velocidad de desplazamiento.</p>
+                <span class="badge">Pistas</span>
+                <h3>Verificación del diseño de pistas en el lienzo</h3>
+                <img src="Image (2).jpg" alt="Pistas cargadas en el módulo convert SVG">
+                <p>Una vez cargado el archivo, confirmamos que el módulo reconozca las dimensiones exactas en milímetros y la resolución (DPI) de nuestro diseño.</p>
             </article>
 
-            <!-- Paso 8 (mods9) -->
             <article class="card searchable">
-                <span class="badge">Cálculo</span>
-                <h3>Calcular trayectorias y tiempo</h3>
-                <img src="mods9.jpeg" alt="Botón calculate y tiempo estimado">
-                <p>Damos clic en el botón de calcular para que el programa trace el recorrido de la fresa y nos muestre el tiempo total que tardará la máquina en terminar el trabajo.</p>
+                <span class="badge">Pistas</span>
+                <h3>Inversión de corte en las pistas</h3>
+                <img src="Image (26).jpg" alt="Botón invert para aislar pistas">
+                <p>En el módulo convert SVG image pulsamos el botón "invert". De esta manera las pistas quedan en color blanco para protegerlas, y el fondo en color negro para que sea el cobre que la máquina retirará.</p>
             </article>
 
-            <!-- Paso 9 (mods13) -->
             <article class="card searchable">
-                <span class="badge">Descarga</span>
-                <h3>Obtener el archivo para la monoFab</h3>
-                <img src="mods13.jpeg" alt="Módulo save file y descarga para Roland">
-                <p>Ubicamos el bloque de guardado y descargamos el archivo final (.rml), el cual cargaremos directamente en el programa que controla la fresadora.</p>
+                <span class="badge">Pistas</span>
+                <h3>Selección de herramienta para pistas</h3>
+                <img src="Image (18).jpg" alt="Selección de fresa plana o punta en V">
+                <p>En el bloque de parámetros elegimos la fresa adecuada para pistas (comúnmente punta de grabado en V o fresa plana), ajustando el número de pasadas para retirar el cobre sobrante.</p>
             </article>
 
-            <!-- Paso 10 (mods11) -->
             <article class="card searchable">
-                <span class="badge">Trayectoria</span>
-                <h3>Revisión de las pasadas de corte</h3>
-                <img src="mods11.jpeg" alt="Trazo de compensación y pasadas de corte">
-                <p>Se abrirá una vista de líneas donde podemos comprobar cómo se moverá la fresa paso a paso alrededor de la figura para no dañar el circuito.</p>
+                <span class="badge">Perforaciones</span>
+                <h3>Carga del archivo de taladrado (User_1)</h3>
+                <img src="Image (8).jpg" alt="Carga de hola mundo-User_1.svg">
+                <p>Para la segunda etapa cargamos el archivo vectorial correspondiente a los barrenos (hola mundo-User_1.svg), que contiene los puntos donde se harán los agujeros.</p>
             </article>
 
-            <!-- Paso 11 (mods10) -->
             <article class="card searchable">
-                <span class="badge">Resultado</span>
-                <h3>Simulación visual en 3D</h3>
-                <img src="mods10.jpeg" alt="Vista previa 3D de la simulación del corte">
-                <p>Finalmente, podemos revisar la simulación en 3D para confirmar que la pieza queda totalmente recortada y con la forma deseada antes de enviarla a fabricar.</p>
+                <span class="badge">Etiquetas</span>
+                <h3>Carga del archivo de serigrafía (User_2)</h3>
+                <img src="Image (12).jpg" alt="Carga de hola mundo-User_2.svg">
+                <p>En la tercera etapa importamos el archivo con los textos y etiquetas de identificación (hola mundo-User_2.svg) para grabarlos sobre la placa.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Periferia</span>
+                <h3>Carga del contorno exterior (Edge_Cuts)</h3>
+                <img src="mods5.jpeg" alt="Selección de hola mundo-Edge_Cuts.svg">
+                <p>Para la última etapa cargamos el archivo SVG con el contorno exterior de la tarjeta (hola mundo-Edge_Cuts.svg) para recortar la forma final de la PCB.</p>
             </article>
         </section>
-
 
         <!-- ================= PESTAÑA: MONOFAB ================= -->
         <section id="monofab" class="tab-content">
             <div class="search-box">
                 <input type="text" onkeyup="filterCards(this)" placeholder="🔍 Buscar en MonoFab...">
             </div>
-            <!-- Monofab 1 -->
+
             <article class="card searchable">
                 <span class="badge">MonoFab</span>
                 <h3>¿Qué es la Roland MonoFab SRM-20?</h3>
@@ -449,69 +435,96 @@
                 <span class="date">https://www.rolanddga.com/es/productos/3d/srm-20-fresadora-compacta</span>
             </article>
             
-            <!-- Monofab 2 -->
             <article class="card searchable">
                 <span class="badge">Vpanel</span>
                 <h3>¿Cómo descargar el software "Vpanel" para el uso de la MonoFab?</h3>
                 <p>Para poder hacer uso de la MonoFab lo primero que tenemos es buscar e instalar el software correspondiente, el cual podemos encontrar en el buscador simplemente poniendo "Vpanel SRM-20" o algo por el estilo.</p>
                 <p>Una vez adentro de la página entraremos al apartado de software y buscaremos la parte que diga "monoFab Driver", lo cual nos abrirá un menú desplegable con lo cual tendremos que buscar el Driver que corresponda a nuestro equipo e instalarlo.</p>
-                <p>Posteriormente de seguir los pasos indicados por el instalador, ya podremos hacer uso del Vpanel y de la MonoFab SRM-20. De igual manera el vínculo con la página para instalar el driver se encuentra a continuación:</p>
                 <span class="date">https://downloadcenter.rolanddg.com/SRM-20#software</span>
             </article>
 
-            <!-- Monofab 3 -->
             <article class="card searchable">
                 <span class="badge">Instalación placa</span>
                 <h3>¿Cómo preparar nuestro material en la fresadora?</h3>
                 <p>Para la instalación de nuestro material en la fresadora y posteriormente su configuración lo primero que llevamos a cabo es el uso de una "placa de sacrifición" la cual su función es evitar que la propia plataforma de la fresadora se dañe u obtenga marcas. En esta plataforma vamos a pegar nuestra placa haciendo uso de cinta de doble cara buscando que quede lo más paralelo posible para evitar errores.</p>
-                <img src="Monofab4.png" alt="Foto material">
+                <img src="Monofab4.jpeg" alt="Preparación placa">
                 <p>Una vez realizado esto podemos instalar nuestro material en la fresadora y ajustándolo con los tornillos que esta misma tiene.</p>
-                <img src="Monofab5.png" alt="Foto material ajustado">
+                <img src="Monofab5.jpeg" alt="Ajuste de tornillos">
             </article>
 
-            <!-- Monofab 4 -->
             <article class="card searchable">
                 <span class="badge">Broca</span>
                 <h3>¿Cómo instalar la broca?</h3>
                 <p>Para realizar la instalación de la broca tenemos que hacer uso de la llave Allen correspondiente, con la cual podremos ajustar como es debido las brocas que vamos a ocupar para cada capa.</p>
-                <img src="Monofab6.png" alt="Foto broca">
+                <img src="Monofab6.jpeg" alt="Instalación de broca con llave allen">
             </article>
 
-            <!-- Monofab 5 -->
             <article class="card searchable">
                 <span class="badge">Configuración</span>
                 <h3>Configuración de los orígenes</h3>
                 <p>Para poder empezar a fabricar lo primero que debemos hacer es establecer los orígenes de nuestros ejes "x", "y" y "z", para hacer esto lo que buscamos es "rallar" la superficie de nuestra placa para que de esta manera la broca no entre demasiado y terminemos sin pistas. La configuración la vamos a realizar con el uso de nuestro Vpanel y de tantear hasta obtener un rayón en la superficie de nuestra placa.</p>
-                <img src="Monofab1.png" alt="Foto orígenes">
-                <p>Una vez establecido nuestros orígenes, primero recomendamos apagar la broca y levantarla en el eje "z" para poder comprobar que sí está bien establecido y de esta manera empezar a fabricar.</p>
+                <img src="Monofab1.png" alt="Configuración de orígenes">
             </article>
 
-            <!-- Monofab 6 -->
-            <article class="card searchable">
-                <span class="badge">Agregar archivos</span>
-                <h3>¿Cómo agregar nuestros archivos de fabricación?</h3>
-                <p>Primero que nada, ¿cómo recomendamos nosotros el orden de fabricación de cada una de nuestras capas? Nosotros recomendamos iniciar con las perforaciones que es lo más "minúsculo" de hacer, para posteriormente realizar las etiquetas y las pistas; y finalmente el contorno de nuestra placa. Esto con el objetivo de evitar algún error de que se mueva la placa u otras cosas.</p>
-                <p>Para agregar nuestros archivos lo primero que debemos hacer es, desde la vista general del Vpanel buscar el apartado de "Cut", una vez abierto nos abrirá otra ventana en la cual buscaremos el botón de "Add" para poder agregar nuestros archivos. (Podemos agregar más de un archivo para fabricar a la vez y a su vez debemos saber que en el orden que los insertemos será el orden en que se fabriquen)</p>
-                <img src="Monofab3.png" alt="Foto archivos 1">
-                <img src="Monofab2.png" alt="Foto archivos 2">
-            </article>
-
-            <!-- Monofab 7 -->
             <article class="card searchable">
                 <span class="badge">Fabricar</span>
                 <h3>La fabricación</h3>
                 <p>Una vez hecha toda la configuración y calibración para empezar a fabricar simplemente debemos pulsar en el botón de output para que empiece a fabricar y estar atentos por cualquier tipo de problema que pueda llegar a suceder, y limpiar una vez que terminemos para tratar de no inhalar el polvo residual que quede.</p>
-                <img src="Monofab2.png" alt="Foto fabricación">
+                <img src="Monofab2.png" alt="Proceso de fabricación">
             </article>
         </section>
 
-        <!-- ================= PESTAÑA: ACERCA DE ================= -->
+        <!-- ================= PESTAÑA: MULTISIM ================= -->
+        <section id="multisim" class="tab-content">
+            <div class="search-box">
+                <input type="text" onkeyup="filterCards(this)" placeholder="🔍 Buscar en Multisim...">
+            </div>
+
+            <article class="card searchable">
+                <span class="badge">Multisim</span>
+                <h3>Resumen: ¿Qué es NI Multisim?</h3>
+                <img src="logomultisim.jpg" alt="Logo de NI Multisim">
+                <p>NI Multisim es un programa de simulación de circuitos basado en SPICE. Nos permite dibujar esquemáticos, probar el funcionamiento de circuitos analógicos y digitales en tiempo real y medir voltajes y corrientes antes de armar físicamente la placa.</p>
+                <span class="date">Entorno de diseño y simulación virtual</span>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Entorno</span>
+                <h3>Área de trabajo de Multisim</h3>
+                <img src="ms1.png" alt="Ventana principal de Multisim">
+                <p>Al iniciar Multisim se abre la hoja de trabajo en blanco con su rejilla de puntos y las barras de herramientas superiores para controlar la simulación y gestionar el proyecto.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Instrumentación</span>
+                <h3>Barra lateral de instrumentos virtuales</h3>
+                <img src="ms2.png" alt="Barra de instrumentos de medición" style="width: auto; max-width: 180px; max-height: 420px; margin: 15px auto; display: block;">
+                <p>A la derecha de la pantalla tenemos la barra con todos los aparatos de laboratorio virtuales: multímetros, generadores de funciones, osciloscopios y analizadores lógicos listos para conectarse al circuito.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Medición</span>
+                <h3>Medición de voltaje sobre la primera resistencia</h3>
+                <img src="ms10.png" alt="Pantalla del multímetro marcando 2.164 V">
+                <p>Iniciamos la simulación con el botón verde de "Run" y abrimos la carátula del multímetro: configurado en voltaje continuo (V DC), nos marca 2.164 V sobre la resistencia de 2.2 kΩ.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Conclusión</span>
+                <h3>¿Por qué conviene simular en Multisim antes de fabricar la PCB?</h3>
+                <p>Implementar simulaciones previas en Multisim resulta fundamental dentro del flujo de diseño electrónico para prevenir errores y costos, verificar el funcionamiento de forma segura y asegurar que la placa final sea funcional desde el primer intento.</p>
+                <span class="date">Validación virtual previa al maquinado</span>
+            </article>
+        </section>
+
+        <!-- ================= PESTAÑA: ACERCA DE MÍ ================= -->
         <section id="acerca" class="tab-content">
             <div class="card">
                 <h3>Información de Contacto</h3>
                 <img src="WhatsApp Image 2026-06-23 at 8.05.01 PM.jpeg" alt="Foto de Tomás Toledo" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 15px 0; display: block;">
                 <p><strong>Nombre:</strong> Tomás Toledo Fernández</p>
                 <p><strong>Estudiante de:</strong> Ingeniería Mecatrónica, Ibero Puebla</p>
+                <p><strong>Materia/Grupo:</strong> Producción Electrónica grupo B</p>
                 <p><strong>Contacto:</strong> 202945@iberopuebla.mx</p>
             </div>
         </section>
@@ -520,32 +533,23 @@
 
     <!-- CÓDIGO JAVASCRIPT (INTERACTIVIDAD) -->
     <script>
-        function switchTab(tabId, btnElement) {
-            // Ocultar todas las secciones
+        function switchTab(tabId, clickedBtn) {
             const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => {
-                content.classList.remove('active');
-            });
+            contents.forEach(content => content.classList.remove('active'));
 
-            // Quitar la clase active a todos los botones
             const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(button => {
-                button.classList.remove('active');
-            });
+            buttons.forEach(button => button.classList.remove('active'));
 
-            // Mostrar la sección seleccionada
             const targetSection = document.getElementById(tabId);
             if (targetSection) {
                 targetSection.classList.add('active');
             }
 
-            // Marcar el botón presionado como activo
-            if (btnElement) {
-                btnElement.classList.add('active');
+            if (clickedBtn) {
+                clickedBtn.classList.add('active');
             }
         }
 
-        // Función para el buscador de tarjetas
         function filterCards(inputElement) {
             const input = inputElement.value.toLowerCase();
             const currentSection = inputElement.closest('.tab-content');
