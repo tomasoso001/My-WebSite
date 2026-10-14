@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Profesional - Tomás Toledo</title>
+    <title>Bitácora Escolar</title>
 
     <!-- Fuentes de Google -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
         /* --- ESTILOS GENERALES Y DISEÑO --- */
         :root {
             --primary-color: #146B3A;
-            --primary-hover: #0e4b27;
+            --primary-hover: #4338ca;
             --bg-color: #f8fafc;
             --card-bg: #ffffff;
             --text-color: #1e293b;
@@ -34,7 +34,7 @@
         }
 
         header {
-            background: linear-gradient(135deg, var(--primary-color), #0e4b27);
+            background: linear-gradient(135deg, var(--primary-color), #146B3A);
             color: white;
             text-align: center;
             padding: 3rem 1rem;
@@ -60,7 +60,6 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            flex-wrap: wrap;
         }
 
         .tab-btn {
@@ -110,14 +109,14 @@
             border-color: var(--primary-color);
         }
 
-        /* --- SECCIONES Y PESTAÑAS (VISIBILIDAD CONTROLADA) --- */
+        /* --- SECCIONES Y PESTAÑAS --- */
         .tab-content {
-            display: none !important;
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
         }
 
         .tab-content.active {
-            display: block !important;
-            animation: fadeIn 0.4s ease-in-out;
+            display: block;
         }
 
         @keyframes fadeIn {
@@ -170,60 +169,39 @@
             border-radius: 8px;
             margin: 15px 0;
         }
-
-        /* --- LISTAS DE HABILIDADES --- */
-        ul {
-            margin-left: 1.5rem;
-            margin-top: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.4rem;
-        }
     </style>
 </head>
 <body>
 
     <!-- ENCABEZADO -->
     <header>
-        <h1>Portafolio Profesional - Tomás Toledo</h1>
-        <p>Ingeniería Mecatrónica | Universidad Iberoamericana Puebla</p>
+        <h1>Portafolio Producción Electronica</h1>
+        <p>Maestro: Javier Osorio Figueroa | Alumnos: Leo y Tommy</p>
     </header>
 
-    <!-- NAVEGACIÓN POR PESTAÑAS -->
+    <!-- NAVEGACIÓN POR PESTAÑAS (CON THIS PARA NAVEGACIÓN PERFECTA) -->
     <nav>
         <button class="tab-btn active" onclick="switchTab('inicio', this)">Inicio</button>
         <button class="tab-btn" onclick="switchTab('kicad', this)">KiCad</button>
         <button class="tab-btn" onclick="switchTab('mods', this)">Mods</button>
         <button class="tab-btn" onclick="switchTab('monofab', this)">MonoFab</button>
         <button class="tab-btn" onclick="switchTab('multisim', this)">Multisim</button>
-        <button class="tab-btn" onclick="switchTab('acerca', this)">Acerca de mí</button>
+        <button class="tab-btn" onclick="switchTab('acerca', this)">Acerca de nosotros</button>
     </nav>
 
     <!-- CONTENIDO -->
     <div class="container">
 
-        <!-- PESTAÑA: INICIO (PERFIL PROFESIONAL / PITCH) -->
+        <!-- PESTAÑA: INICIO -->
         <section id="inicio" class="tab-content active">
-            <h2>Perfil Profesional</h2>
-            <p style="margin-bottom: 1.5rem;">Bienvenido a mi portafolio. Aquí presento una muestra de mis capacidades técnicas, proyectos de ingeniería y bitácoras de desarrollo.</p>
+            <h2>Introducción</h2>
+            <p style="margin-bottom: 1.5rem;">Esta es página donde publicaremos documentaremos acerca de nuestro progreso en la materia de producción electronica.</p>
             
             <div class="card">
-                <span class="badge">Sobre mí</span>
-                <h3>Tomás Toledo Fernández</h3>
-                <img src="WhatsApp Image 2026-06-23 at 8.05.01 PM.jpeg" alt="Foto de Tomás Toledo">
-                <p>Soy estudiante de <strong>Ingeniería Mecatrónica en la Universidad Iberoamericana Puebla</strong>. Cuento con una sólida formación orientada al desarrollo de soluciones tecnológicas que combinan el diseño mecánico, la electrónica embebida, la programación y la manufactura avanzada.</p>
-                
-                <h4 style="color: var(--primary-color); margin-top: 1rem;">Áreas de Competencia y Tecnologías:</h4>
-                <ul>
-                    <li><strong>Programación y Modelado:</strong> Desarrollo de software y algoritmos en Python y C/C++ para modelado matemático, operaciones matriciales y sistemas automatizados.</li>
-                    <li><strong>Diseño Mecánico y CAD:</strong> Experiencia en el uso de software de diseño avanzado como CATIA V5 e impresión 3D (operación y mantenimiento de equipos como Ender 3 Pro con laminadores como PrusaSlicer y Cura).</li>
-                    <li><strong>Electrónica y Hardware:</strong> Trabajo práctico con microcontroladores (módulos ESP32), sensores (IMUs MPU-6050/9250, amplificadores HX711 para celdas de carga), drivers de motores (TB6612FNG) y visión artificial mediante OpenCV (Python).</li>
-                    <li><strong>Simulación y Procesos:</strong> Elaboración de modelos de simulación en MATLAB y NI Multisim para optimización de parámetros y validación virtual de circuitos analógicos y digitales.</li>
-                </ul>
-
-                <p style="margin-top: 1rem;">Mi objetivo profesional es integrarme a proyectos de alta exigencia tecnológica donde pueda aportar capacidad analítica, resolución de problemas complejos y un enfoque práctico en el desarrollo de sistemas mecatrónicos innovadores.</p>
+                <span class="badge">Producción Electronica</span>
+                <h3>¿Que hacemos en producción electronica?</h3>
+                <img src="ImagenPlaca.jpg" alt="Foto de placa">
+                <p>La materia de producción electronica es una materia enfocada en diseñar y fabricar componentes electronicos desde cero, desde el planteamiento del proyecto hasta la fabricación de placas. Aqui abarcamos desde la elaboración de esquematicos y el diseño de placas en software como KiCad o Altium, hasta el uso de herramientas y software especializado para el corte, soldado y ensamblaje de dichas placas.</p>
             </div>
         </section>
 
@@ -322,12 +300,13 @@
             </article>
         </section>
 
-        <!-- ================= PESTAÑA: MODS ================= -->
+      <!-- ================= PESTAÑA: MODS ================= -->
         <section id="mods" class="tab-content">
             <div class="search-box">
                 <input type="text" onkeyup="filterCards(this)" placeholder="🔍 Buscar en Mods...">
             </div>
 
+            <!-- Resumen Mods -->
             <article class="card searchable">
                 <span class="badge">Mods</span>
                 <h3>Resumen: Plataforma Mods CE</h3>
@@ -336,6 +315,7 @@
                 <span class="date">Fuente: https://gitlab.fabcloud.org/pub/project/mods/#what-is-mods</span>
             </article>
 
+            <!-- ================= INICIO Y CONFIGURACIÓN ================= -->
             <article class="card searchable">
                 <span class="badge">Inicio</span>
                 <h3>Acceso a la herramienta de Mods</h3>
@@ -371,18 +351,26 @@
                 <p>Identificamos los módulos esenciales del flujo: desde la entrada de los archivos vectoriales (read SVG), la conversión a imagen y el cálculo del ancho de pasada, hasta la salida de coordenadas para la máquina.</p>
             </article>
 
+            <!-- ================= ETAPA 1: PISTAS (TRACES) ================= -->
             <article class="card searchable">
                 <span class="badge">Pistas</span>
                 <h3>Carga del archivo de pistas (F_Cu)</h3>
                 <img src="Image (1).jpg" alt="Selección del archivo hola mundo-F_Cu.svg">
-                <p>En el módulo read SVG hacemos clic en "select SVG file" y cargamos el archivo vectorial correspondiente al cobre (hola mundo-F_Cu.svg) exportado desde KiCad.</p>
+                <p>En el módulo read SVG hacemos clic en "select SVG file" y cargamos el archivo vectorial correspondiente a la capa de cobre (hola mundo-F_Cu.svg) exportado desde KiCad.</p>
             </article>
 
             <article class="card searchable">
                 <span class="badge">Pistas</span>
                 <h3>Verificación del diseño de pistas en el lienzo</h3>
                 <img src="Image (2).jpg" alt="Pistas cargadas en el módulo convert SVG">
-                <p>Una vez cargado el archivo, confirmamos que el módulo reconozca las dimensiones exactas en milímetros y la resolución (DPI) de nuestro diseño.</p>
+                <p>Una vez cargado el archivo, confirmamos que el módulo reconozca las dimensiones exactas en milímetros y la resolución (DPI) de nuestro diseño de pistas.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Pistas</span>
+                <h3>Selección de las pistas para trazado</h3>
+                <img src="Image (25).jpg" alt="Visualización de pistas para trazar en la monoFab">
+                <p>Así se ve la interfaz cuando las pistas están seleccionadas y listas para conectarse con los bloques de cálculo de aislamiento en la monoFab.</p>
             </article>
 
             <article class="card searchable">
@@ -394,18 +382,83 @@
 
             <article class="card searchable">
                 <span class="badge">Pistas</span>
-                <h3>Selección de herramienta para pistas</h3>
-                <img src="Image (18).jpg" alt="Selección de fresa plana o punta en V">
-                <p>En el bloque de parámetros elegimos la fresa adecuada para pistas (comúnmente punta de grabado en V o fresa plana), ajustando el número de pasadas para retirar el cobre sobrante.</p>
+                <h3>Procesamiento del mapa de bits de pistas</h3>
+                <img src="Image (5).jpg" alt="Pistas procesadas en blanco y negro">
+                <p>El sistema genera la máscara binaria en blanco y negro para calcular con precisión la separación y el umbral de corte alrededor de cada camino conductor.</p>
             </article>
 
+            <article class="card searchable">
+                <span class="badge">Pistas</span>
+                <h3>Filtro de umbral y transformación de distancias</h3>
+                <img src="Image.jpg" alt="Módulos image threshold y distance transform">
+                <p>Los módulos de umbral y transformación de distancias procesan los bordes de las pistas para determinar por dónde pasará el centro de la broca al aislar el cobre.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Pistas</span>
+                <h3>Selección de herramienta para pistas</h3>
+                <img src="Image (18).jpg" alt="Selección de fresa plana o punta en V">
+                <p>En el bloque de parámetros elegimos la fresa adecuada para pistas (comúnmente punta de grabado en V de 30°/40° o fresa plana de 0.40 mm), ajustando el número de pasadas para retirar el cobre sobrante.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Pistas</span>
+                <h3>Configuración de velocidad y origen para pistas</h3>
+                <img src="Image (6).jpg" alt="Velocidad y tiempo estimado para pistas">
+                <p>Revisamos la velocidad de avance de corte (4 mm/s), la altura de seguridad en Z y el tiempo estimado que tardará la fresadora en aislar todas las pistas.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Pistas</span>
+                <h3>Inspección del recorrido vectorial de pistas</h3>
+                <img src="Image (7).jpg" alt="Recorrido de la fresa alrededor de las pistas">
+                <p>Se abre la vista previa donde comprobamos el recorrido exacto de la herramienta contorneando cada pista sin cortar ninguna línea del circuito.</p>
+            </article>
+
+            <!-- ================= ETAPA 2: PERFORACIONES (DRILL) ================= -->
             <article class="card searchable">
                 <span class="badge">Perforaciones</span>
                 <h3>Carga del archivo de taladrado (User_1)</h3>
                 <img src="Image (8).jpg" alt="Carga de hola mundo-User_1.svg">
-                <p>Para la segunda etapa cargamos el archivo vectorial correspondiente a los barrenos (hola mundo-User_1.svg), que contiene los puntos donde se harán los agujeros.</p>
+                <p>Para la segunda etapa cargamos el archivo vectorial correspondiente a los barrenos (hola mundo-User_1.svg), el cual contiene los puntos donde se harán los agujeros.</p>
             </article>
 
+            <article class="card searchable">
+                <span class="badge">Perforaciones</span>
+                <h3>Ajuste de broca y profundidad de perforación</h3>
+                <img src="Image (9).jpg" alt="Parámetros de taladro y profundidad">
+                <p>Configuramos la broca para barrenado (por ejemplo 0.79 mm drill) y ajustamos la profundidad de corte para que traspase la placa por completo.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Perforaciones</span>
+                <h3>Cálculo de trayectorias de taladrado</h3>
+                <img src="Image (10).jpg" alt="Cálculo de tiempo para perforaciones">
+                <p>Presionamos en "calculate" para que el programa calcule la secuencia de puntos de taladrado y la duración estimada del proceso.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Perforaciones</span>
+                <h3>Visualización de puntos de perforación</h3>
+                <img src="Image (14).jpg" alt="Puntos de perforación en la vista vectorial">
+                <p>En la ventana de simulación vectorial verificamos que cada orificio se encuentre alineado exactamente en el lugar donde irán los componentes y pines.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Perforaciones</span>
+                <h3>Descarga del archivo de perforaciones</h3>
+                <img src="Image (11).jpg" alt="Descarga del archivo RML para perforaciones">
+                <p>Revisamos el tiempo estimado para los barrenos (alrededor de 4 minutos y medio) y descargamos el archivo RML desde el botón save file.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Perforaciones</span>
+                <h3>Simulación 3D das perforaciones</h3>
+                <img src="Image (13).jpg" alt="Simulación tridimensional de los agujeros">
+                <p>Revisamos la simulación tridimensional para comprobar que los agujeros atraviesen adecuadamente la placa de cobre sin desviaciones.</p>
+            </article>
+
+            <!-- ================= ETAPA 3: ETIQUETAS (LABELS) ================= -->
             <article class="card searchable">
                 <span class="badge">Etiquetas</span>
                 <h3>Carga del archivo de serigrafía (User_2)</h3>
@@ -414,10 +467,103 @@
             </article>
 
             <article class="card searchable">
+                <span class="badge">Etiquetas</span>
+                <h3>Ajuste de grabado superficial</h3>
+                <img src="Image (20).jpg" alt="Ajuste de parámetros para grabado de texto">
+                <p>Definimos una profundidad de corte mínima para el grabado superficial con punta fina, de modo que marque las letras con nitidez sin desgastar la fibra de la placa.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Etiquetas</span>
+                <h3>Trayectoria de letras y traslados rápidos</h3>
+                <img src="Image (15).jpg" alt="Trazado de letras y movimientos rápidos en rojo">
+                <p>Revisamos el recorrido vectorial de los textos; las líneas rojas indican los movimientos rápidos del cabezal en el aire de una letra a otra.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Etiquetas</span>
+                <h3>Simulación 3D de las etiquetas</h3>
+                <img src="Image (16).jpg" alt="Simulación 3D de los textos grabados">
+                <p>Comprobamos en la simulación 3D que todos los textos y nombres de componentes queden totalmente legibles sobre la superficie de cobre.</p>
+            </article>
+
+            <!-- ================= ETAPA 4: PERIFERIA / CORTE EXTERIOR (EDGE CUTS) ================= -->
+            <article class="card searchable">
                 <span class="badge">Periferia</span>
                 <h3>Carga del contorno exterior (Edge_Cuts)</h3>
                 <img src="mods5.jpeg" alt="Selección de hola mundo-Edge_Cuts.svg">
                 <p>Para la última etapa cargamos el archivo SVG con el contorno exterior de la tarjeta (hola mundo-Edge_Cuts.svg) para recortar la forma final de la PCB.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Periferia</span>
+                <h3>Selección de la fresa de corte exterior</h3>
+                <img src="mods6.jpeg" alt="Selección de fresa de 1.59 mm cutout">
+                <p>Seleccionamos la punta de 1.59 mm (cutout), que es la fresa robusta más cercana a la medida de 2 mm empleada para cortar todo el grosor del material.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Periferia</span>
+                <h3>Configuración de parámetros y velocidad de periferia</h3>
+                <img src="mods7.jpeg" alt="Ajuste de diámetro 1.99 mm y pasadas">
+                <p>Ingresamos los datos de corte exterior: diámetro nominal de 1.99 mm, número de pasadas escalonadas en profundidad, origen cero y velocidad de avance de 4 mm/s.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Periferia</span>
+                <h3>Cálculo de trayectorias y tiempo de corte</h3>
+                <img src="Image (19).jpg" alt="Botón calculate y tiempo estimado de corte exterior">
+                <p>Pulsamos el botón calculate para procesar las trayectorias exteriores y obtener el tiempo estimado que tardará la monoFab en completar el corte.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Periferia</span>
+                <h3>Demostración de pasadas del contorno exterior</h3>
+                <img src="Image (24).jpg" alt="Demostración de pasadas de la silueta exterior">
+                <p>Revisamos la proyección de líneas donde se observa cómo la máquina realizará las pasadas concéntricas escalonadas para cortar el contorno de forma suave.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Periferia</span>
+                <h3>Inspección de las pasadas en la silueta completa</h3>
+                <img src="Image (28).jpg" alt="Trazado completo del corte exterior">
+                <p>Confirmamos que las líneas de corte rodeen toda la silueta exterior sin invadir ninguna de las pistas ni barrenos internos de la placa.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Periferia</span>
+                <h3>Detalle de compensación en esquinas</h3>
+                <img src="Image (27).jpg" alt="Detalle de esquinas y compensación de herramienta">
+                <p>Verificamos que en las curvas y puntas de la silueta la compensación del radio de la fresa se mantenga por el exterior para conservar las dimensiones exactas.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Periferia</span>
+                <h3>Descarga del archivo de corte perimetral</h3>
+                <img src="Image (29).jpg" alt="Extracción del archivo RML para corte exterior">
+                <p>En el módulo save file descargamos el archivo de corte exterior con el formato de instrucciones RML listo para la máquina.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Periferia</span>
+                <h3>Simulación 3D del corte final</h3>
+                <img src="Image (22).jpg" alt="Simulación tridimensional del corte exterior">
+                <p>Revisamos la simulación tridimensional final para comprobar que la placa queda completamente aislada y recortada de la baquelita en bruto.</p>
+            </article>
+
+            <!-- ================= GESTIÓN DE ARCHIVOS RML ================= -->
+            <article class="card searchable">
+                <span class="badge">Archivos RML</span>
+                <h3>Organización y renombrado de los archivos RML</h3>
+                <img src="Image (21).jpg" alt="Renombrado de archivos en la carpeta Descargas">
+                <p>En la carpeta de descargas renombramos los archivos generados (pistas, barrenos, etiquetas y corte perimetral) para identificarlos claramente antes de cargarlos en el Vpanel de la monoFab.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Coordenadas</span>
+                <h3>Inspección de coordenadas RML para la monoFab</h3>
+                <img src="Image (30).jpg" alt="Coordenadas RML abiertas en Visual Studio Code">
+                <p>Al abrir el archivo en un editor como VS Code podemos apreciar las instrucciones numéricas generadas por Mods: comandos de velocidad, elevaciones de seguridad en Z y coordenadas absolutas de maquinado.</p>
             </article>
         </section>
 
@@ -437,18 +583,19 @@
             
             <article class="card searchable">
                 <span class="badge">Vpanel</span>
-                <h3>¿Cómo descargar el software "Vpanel" para el uso de la MonoFab?</h3>
-                <p>Para poder hacer uso de la MonoFab lo primero que tenemos es buscar e instalar el software correspondiente, el cual podemos encontrar en el buscador simplemente poniendo "Vpanel SRM-20" o algo por el estilo.</p>
-                <p>Una vez adentro de la página entraremos al apartado de software y buscaremos la parte que diga "monoFab Driver", lo cual nos abrirá un menú desplegable con lo cual tendremos que buscar el Driver que corresponda a nuestro equipo e instalarlo.</p>
+                <h3>¿Cómo descargar el software "Vpanel para el uso de la MonoFab?</h3>
+                <p>Para poder hacer uso de la MonoFab lo primero que tenemos es buscar eh instalar el software correspondiente, el cual podemos encontrar en el buscador simplemente poniendo "Vpanel SRM-20" o algo por el estilo.</p>
+                <p>Una vez adentro de la pagina entraremos al apartado de software y buscaremos la parte que diga "monoFab Driver", lo cual nos abrira un menu desplegable con lo cual tendremos que buscar el Driver que corresponda a nuestro equipo eh instalarlo. </p>
+                <p>Posteriormente de seguir los pasos indicados por el instalador, ya podremos hacer uso del Vpanel y de la MonoFab SRM-20.De igual manera el vinculo con la pagina para instalar el driver de encuentra a continuación:</p>
                 <span class="date">https://downloadcenter.rolanddg.com/SRM-20#software</span>
             </article>
 
             <article class="card searchable">
-                <span class="badge">Instalación placa</span>
+                <span class="badge">Intalación placa</span>
                 <h3>¿Cómo preparar nuestro material en la fresadora?</h3>
-                <p>Para la instalación de nuestro material en la fresadora y posteriormente su configuración lo primero que llevamos a cabo es el uso de una "placa de sacrifición" la cual su función es evitar que la propia plataforma de la fresadora se dañe u obtenga marcas. En esta plataforma vamos a pegar nuestra placa haciendo uso de cinta de doble cara buscando que quede lo más paralelo posible para evitar errores.</p>
+                <p>Para la instalación de nuestro material en la fresadora y posteriormente su configuración lo primero que llevamos a acabo es el uso de una "placa de sacrifición" la cual su función es evitar que la propia plataforma de la fresadora se dañe u obtenga marcas. En esta plataforma vamos a pegar nuestra placa haciendo uso de cinta de doble cara buscando que quede lo más pararelo posible para evitar errores.</p>
                 <img src="Monofab4.jpeg" alt="Preparación placa">
-                <p>Una vez realizado esto podemos instalar nuestro material en la fresadora y ajustándolo con los tornillos que esta misma tiene.</p>
+                <p>Una vez realizado esto podemos instalar nuestro material en la fresadora y ajustandola con los tornillos que esta misma tiene.</p>
                 <img src="Monofab5.jpeg" alt="Ajuste de tornillos">
             </article>
 
@@ -461,15 +608,25 @@
 
             <article class="card searchable">
                 <span class="badge">Configuración</span>
-                <h3>Configuración de los orígenes</h3>
-                <p>Para poder empezar a fabricar lo primero que debemos hacer es establecer los orígenes de nuestros ejes "x", "y" y "z", para hacer esto lo que buscamos es "rallar" la superficie de nuestra placa para que de esta manera la broca no entre demasiado y terminemos sin pistas. La configuración la vamos a realizar con el uso de nuestro Vpanel y de tantear hasta obtener un rayón en la superficie de nuestra placa.</p>
+                <h3>Configuración de los origenes</h3>
+                <p>Para poder empezar a fabricar lo primero que debemos hacer es establecer los origenes de nuestros ejes "x", "y" y "z", para hacer esto lo que buscamos el "rallar" la superficie de nuestra placa para que de esta manera la broca no entre demasiado y terminemos sin pistas. La configuración la vamos a realizar con el uso de nuestro Vpanel y de tantear hasta obtener un rayon en la superficie de nuestra placa.</p>
                 <img src="Monofab1.png" alt="Configuración de orígenes">
+                <p>Una vez establecido nuestros origenes, primero recomendamos apagar la broca y levantarla en el eje "z" para poder comprobar que si esta bien establecido y de esta manera empezar a fabricar.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Agregar archivos</span>
+                <h3>¿Cómo agregar nuestros archivos de fabricación?</h3>
+                <p>Primero que nada, ¿cómo recomendamos nosotros el orden de fabricación de cada una de nuestras capas? Nosotros recomendamos iniciar con las perforaciones que es lo más "minusculo" de hacer, para posteriormente realizar las etiquetas y las pistas; y finalmente el contorno de nuestra placa. Esto con el objetivo de evitar algun error de que se mueva la placa u otras cosas.</p>
+                <p>Para agregar nuestros archivos lo primero que debemos hacer es, desde la vista general del Vpanel buscar el apartado de "Cut", una vez abierto nos abrira otra ventana en la cual buscaremos el boton de "Add" para poder agregar nuestros archivos. (Podemos agregar más de un archivo para fabricar a la vez y a su vez debemos saber que en el orden que los insertemos sera el oden en que se fabriquen)</p>
+                <img src="Monofab3.png" alt="Panel de corte Vpanel">
+                <img src="Monofab2.png" alt="Lista de archivos para corte">
             </article>
 
             <article class="card searchable">
                 <span class="badge">Fabricar</span>
                 <h3>La fabricación</h3>
-                <p>Una vez hecha toda la configuración y calibración para empezar a fabricar simplemente debemos pulsar en el botón de output para que empiece a fabricar y estar atentos por cualquier tipo de problema que pueda llegar a suceder, y limpiar una vez que terminemos para tratar de no inhalar el polvo residual que quede.</p>
+                <p>Una vez hecha toda la configuración y calibración para empezar a fabricar simplemente debemos pulsar en el boton de output para que empiece a fabricar y estar atentos por cualquier tipo de problema que pueda llegar a suceder, y limpiar una vez que terminemos para tratar de no inhalar el polvo residual que quede.</p>
                 <img src="Monofab2.png" alt="Proceso de fabricación">
             </article>
         </section>
@@ -480,14 +637,16 @@
                 <input type="text" onkeyup="filterCards(this)" placeholder="🔍 Buscar en Multisim...">
             </div>
 
+            <!-- Resumen Multisim -->
             <article class="card searchable">
                 <span class="badge">Multisim</span>
                 <h3>Resumen: ¿Qué es NI Multisim?</h3>
-                <img src="logomultisim.jpg" alt="Logo de NI Multisim">
+                <img src="logomultisim.png" alt="Logo de NI Multisim">
                 <p>NI Multisim es un programa de simulación de circuitos basado en SPICE. Nos permite dibujar esquemáticos, probar el funcionamiento de circuitos analógicos y digitales en tiempo real y medir voltajes y corrientes antes de armar físicamente la placa.</p>
                 <span class="date">Entorno de diseño y simulación virtual</span>
             </article>
 
+            <!-- 1. Interfaz general -->
             <article class="card searchable">
                 <span class="badge">Entorno</span>
                 <h3>Área de trabajo de Multisim</h3>
@@ -495,40 +654,130 @@
                 <p>Al iniciar Multisim se abre la hoja de trabajo en blanco con su rejilla de puntos y las barras de herramientas superiores para controlar la simulación y gestionar el proyecto.</p>
             </article>
 
+           <!-- 2. Barra de instrumentos virtuales -->
             <article class="card searchable">
                 <span class="badge">Instrumentación</span>
                 <h3>Barra lateral de instrumentos virtuales</h3>
-                <img src="ms2.png" alt="Barra de instrumentos de medición" style="width: auto; max-width: 180px; max-height: 420px; margin: 15px auto; display: block;">
+                <img src="ms2.png" alt="Barra de instrumentos de medición">
                 <p>A la derecha de la pantalla tenemos la barra con todos los aparatos de laboratorio virtuales: multímetros, generadores de funciones, osciloscopios y analizadores lógicos listos para conectarse al circuito.</p>
             </article>
 
+            <!-- 3. Menú de componentes -->
+            <article class="card searchable">
+                <span class="badge">Librería</span>
+                <h3>Búsqueda en la base de datos de componentes</h3>
+                <img src="ms3.png" alt="Ventana Select a Component">
+                <p>Desde el menú de componentes ("Place Basic") accedemos a la librería completa para buscar elementos pasivos como resistencias, capacitores o inductores organizados por familias.</p>
+            </article>
+
+            <!-- 4. Ajuste de valor -->
+            <article class="card searchable">
+                <span class="badge">Propiedades</span>
+                <h3>Configuración del valor de la resistencia</h3>
+                <img src="ms4.png" alt="Propiedades de la resistencia y valor en Ohms">
+                <p>Al hacer doble clic en el componente abrimos la pestaña "Value", donde podemos escribir el valor exacto de resistencia (en Ohms, kΩ, etc.) y definir su tolerancia para el cálculo de la simulación.</p>
+            </article>
+
+            <!-- 5. Etiquetado -->
+            <article class="card searchable">
+                <span class="badge">Identificación</span>
+                <h3>Etiquetado y nombre del componente (RefDes)</h3>
+                <img src="ms5.png" alt="Pestaña Label del componente">
+                <p>En la pestaña "Label" cambiamos el identificador del componente (como R1, R2 o R3) para mantener ordenado el esquema y saber qué elemento estamos midiendo en cada punto.</p>
+            </article>
+
+            <!-- 6. Conexión de terminales -->
+            <article class="card searchable">
+                <span class="badge">Cableado</span>
+                <h3>Interconexión entre componentes</h3>
+                <img src="ms6.png" alt="Cableado entre terminales con puntero en cruz">
+                <p>Al pasar el cursor por los extremos de las resistencias, el cursor cambia a un puntero de cableado con el que podemos trazar las líneas para unir las terminales entre sí.</p>
+            </article>
+
+            <!-- 7. Fuentes de alimentación -->
+            <article class="card searchable">
+                <span class="badge">Alimentación</span>
+                <h3>Selección de fuentes de voltaje y tierra</h3>
+                <img src="ms7.png" alt="Ventana de selección de fuentes y Ground">
+                <p>Desde el icono de fuentes ("Place Source") abrimos la categoría de alimentación para insertar fuentes de corriente continua (DC Power), alterna o la referencia a tierra (Ground).</p>
+            </article>
+
+            <!-- 8. Circuito cerrado con tierra -->
+            <article class="card searchable">
+                <span class="badge">Esquemático</span>
+                <h3>Circuito cerrado con referencia a tierra</h3>
+                <img src="ms8.png" alt="Circuito completo con fuente de 12V y tierra">
+                <p>Terminamos de conectar la fuente de 12V en serie con las resistencias y agregamos la tierra al nodo inferior para que el simulador pueda calcular las caídas de tensión correctamente.</p>
+            </article>
+
+            <!-- 9. Conectar multímetro en el circuito -->
             <article class="card searchable">
                 <span class="badge">Medición</span>
+                <h3>Colocación del multímetro digital</h3>
+                <img src="ms9.png" alt="Multímetro virtual XMM1 colocado en el lienzo">
+                <p>Seleccionamos el multímetro de la barra lateral y lo arrastramos al lienzo para medir la caída de voltaje en la primera resistencia (R1).</p>
+            </article>
+
+            <!-- 10. Medición en R1 -->
+            <article class="card searchable">
+                <span class="badge">Lectura</span>
                 <h3>Medición de voltaje sobre la primera resistencia</h3>
                 <img src="ms10.png" alt="Pantalla del multímetro marcando 2.164 V">
                 <p>Iniciamos la simulación con el botón verde de "Run" y abrimos la carátula del multímetro: configurado en voltaje continuo (V DC), nos marca 2.164 V sobre la resistencia de 2.2 kΩ.</p>
             </article>
 
+            <!-- 11. Medición simultánea en R1 y R3 -->
+            <article class="card searchable">
+                <span class="badge">Comprobación</span>
+                <h3>Medición de voltaje en ambas resistencias</h3>
+                <img src="ms11.png" alt="Dos multímetros midiendo voltajes de 2.164V y 9.836V">
+                <p>Conectamos un segundo multímetro (XMM2) en paralelo con R3 (10 kΩ). El primero registra 2.164 V y el segundo 9.836 V, sumando los 12 V totales de la fuente según la ley de voltajes de Kirchhoff.</p>
+            </article>
+
+            <!-- 12. Multímetro de banco Agilent -->
+            <article class="card searchable">
+                <span class="badge">Instrumento de Banco</span>
+                <h3>Simulación con multímetro de banco de alta precisión</h3>
+                <img src="ms12.png" alt="Multímetro Agilent 34401A mostrando 09.83605 VDC">
+                <p>Además de los multímetros básicos, Multisim permite usar modelos de laboratorio reales como el Agilent 34401A, mostrando la lectura con mayor precisión decimal (9.83605 VDC) en su panel digital interactivo.</p>
+            </article>
+        
+        <!-- Conclusión Multisim -->
             <article class="card searchable">
                 <span class="badge">Conclusión</span>
                 <h3>¿Por qué conviene simular en Multisim antes de fabricar la PCB?</h3>
-                <p>Implementar simulaciones previas en Multisim resulta fundamental dentro del flujo de diseño electrónico para prevenir errores y costos, verificar el funcionamiento de forma segura y asegurar que la placa final sea funcional desde el primer intento.</p>
+                <p>
+                    Implementar simulaciones previas en Multisim resulta fundamental dentro del flujo de diseño electrónico por varias razones :
+                </p>
+                <ul style="margin: 15px 0 15px 25px; line-height: 1.8;">
+                    <li><strong>Prevención de errores y costos:</strong> Permite detectar fallas en el conexionado, valores incorrectos de resistencias o saturaciones de corriente antes de mandar a cortar la placa de cobre o soldar los componentes, evitando el desperdicio de material y componentes dañados.</li>
+                    <li><strong>Verificación rápida sin riesgo:</strong> Los instrumentos virtuales (como multímetros y osciloscopios) facilitan comprobar que las caídas de tensión y las señales coincidan con los cálculos teóricos de manera inmediata y segura.</li>
+                    <li><strong>Integración directa con el diseño físico:</strong> Al comprobar que el circuito funciona correctamente, la información y la lista de conexiones se pueden transferir de forma limpia a entornos de ruteo como Altium o KiCad, asegurando que la PCB final sea funcional desde el primer intento.</li>
+                </ul>
                 <span class="date">Validación virtual previa al maquinado</span>
             </article>
         </section>
 
-        <!-- ================= PESTAÑA: ACERCA DE MÍ ================= -->
+        <!-- ================= PESTAÑA: ACERCA DE ================= -->
         <section id="acerca" class="tab-content">
             <div class="card">
-                <h3>Información de Contacto</h3>
-                <img src="WhatsApp Image 2026-06-23 at 8.05.01 PM.jpeg" alt="Foto de Tomás Toledo" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 15px 0; display: block;">
-                <p><strong>Nombre:</strong> Tomás Toledo Fernández</p>
-                <p><strong>Estudiante de:</strong> Ingeniería Mecatrónica, Ibero Puebla</p>
-                <p><strong>Materia/Grupo:</strong> Producción Electrónica grupo B</p>
+                <h3>Información del Estudiante</h3>
+                <img src="37510.jpg" alt="Foto Leonardo">
+                <p><strong>Nombre:</strong> Leonardo Barrientos Miguel</p>
+                <p><strong>Estudiante de:</strong> Ingenieria Mecatronica, Ibero Puebla</p>
+                <p><strong>Materia/Grupo:</strong> Produccion Electronica grupo B</p>
+                <p><strong>Contacto:</strong> 203586@iberopuebla.mx</p>
+            </div>
+
+            <div class="card">
+                <h3>Información del Estudiante</h3>
+                <img src="WhatsApp Image 2026-06-23 at 8.05.01 PM.jpeg" alt="" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 15px 0; display: block;">
+                <p><strong>Nombre:</strong> Tomas Toledo Fernandez</p>
+                <p><strong>Estudiante de:</strong> Ingenieria Mecatronica, Ibero Puebla</p>
+                <p><strong>Materia/Grupo:</strong> Produccion Electronica grupo B</p>
                 <p><strong>Contacto:</strong> 202945@iberopuebla.mx</p>
             </div>
         </section>
-
     </div>
 
     <!-- CÓDIGO JAVASCRIPT (INTERACTIVIDAD) -->
