@@ -110,14 +110,14 @@
             border-color: var(--primary-color);
         }
 
-        /* --- SECCIONES Y PESTAÑAS --- */
+        /* --- SECCIONES Y PESTAÑAS (CONTROL DE VISIBILIDAD) --- */
         .tab-content {
-            display: none;
-            animation: fadeIn 0.4s ease-in-out;
+            display: none !important;
         }
 
         .tab-content.active {
-            display: block;
+            display: block !important;
+            animation: fadeIn 0.4s ease-in-out;
         }
 
         @keyframes fadeIn {
@@ -193,11 +193,11 @@
 
     <!-- NAVEGACIÓN POR PESTAÑAS -->
     <nav>
-        <button class="tab-btn active" onclick="switchTab('inicio', event)">Inicio</button>
-        <button class="tab-btn" onclick="switchTab('kicad', event)">KiCad</button>
-        <button class="tab-btn" onclick="switchTab('mods', event)">Mods</button>
-        <button class="tab-btn" onclick="switchTab('monofab', event)">MonoFab</button>
-        <button class="tab-btn" onclick="switchTab('acerca', event)">Acerca de mí</button>
+        <button class="tab-btn active" onclick="switchTab('inicio', this)">Inicio</button>
+        <button class="tab-btn" onclick="switchTab('kicad', this)">KiCad</button>
+        <button class="tab-btn" onclick="switchTab('mods', this)">Mods</button>
+        <button class="tab-btn" onclick="switchTab('monofab', this)">MonoFab</button>
+        <button class="tab-btn" onclick="switchTab('acerca', this)">Acerca de mí</button>
     </nav>
 
     <!-- CONTENIDO -->
@@ -452,3 +452,114 @@
             <!-- Monofab 2 -->
             <article class="card searchable">
                 <span class="badge">Vpanel</span>
+                <h3>¿Cómo descargar el software "Vpanel" para el uso de la MonoFab?</h3>
+                <p>Para poder hacer uso de la MonoFab lo primero que tenemos es buscar e instalar el software correspondiente, el cual podemos encontrar en el buscador simplemente poniendo "Vpanel SRM-20" o algo por el estilo.</p>
+                <p>Una vez adentro de la página entraremos al apartado de software y buscaremos la parte que diga "monoFab Driver", lo cual nos abrirá un menú desplegable con lo cual tendremos que buscar el Driver que corresponda a nuestro equipo e instalarlo.</p>
+                <p>Posteriormente de seguir los pasos indicados por el instalador, ya podremos hacer uso del Vpanel y de la MonoFab SRM-20. De igual manera el vínculo con la página para instalar el driver se encuentra a continuación:</p>
+                <span class="date">https://downloadcenter.rolanddg.com/SRM-20#software</span>
+            </article>
+
+            <!-- Monofab 3 -->
+            <article class="card searchable">
+                <span class="badge">Instalación placa</span>
+                <h3>¿Cómo preparar nuestro material en la fresadora?</h3>
+                <p>Para la instalación de nuestro material en la fresadora y posteriormente su configuración lo primero que llevamos a cabo es el uso de una "placa de sacrifición" la cual su función es evitar que la propia plataforma de la fresadora se dañe u obtenga marcas. En esta plataforma vamos a pegar nuestra placa haciendo uso de cinta de doble cara buscando que quede lo más paralelo posible para evitar errores.</p>
+                <img src="Monofab4.png" alt="Foto material">
+                <p>Una vez realizado esto podemos instalar nuestro material en la fresadora y ajustándolo con los tornillos que esta misma tiene.</p>
+                <img src="Monofab5.png" alt="Foto material ajustado">
+            </article>
+
+            <!-- Monofab 4 -->
+            <article class="card searchable">
+                <span class="badge">Broca</span>
+                <h3>¿Cómo instalar la broca?</h3>
+                <p>Para realizar la instalación de la broca tenemos que hacer uso de la llave Allen correspondiente, con la cual podremos ajustar como es debido las brocas que vamos a ocupar para cada capa.</p>
+                <img src="Monofab6.png" alt="Foto broca">
+            </article>
+
+            <!-- Monofab 5 -->
+            <article class="card searchable">
+                <span class="badge">Configuración</span>
+                <h3>Configuración de los orígenes</h3>
+                <p>Para poder empezar a fabricar lo primero que debemos hacer es establecer los orígenes de nuestros ejes "x", "y" y "z", para hacer esto lo que buscamos es "rallar" la superficie de nuestra placa para que de esta manera la broca no entre demasiado y terminemos sin pistas. La configuración la vamos a realizar con el uso de nuestro Vpanel y de tantear hasta obtener un rayón en la superficie de nuestra placa.</p>
+                <img src="Monofab1.png" alt="Foto orígenes">
+                <p>Una vez establecido nuestros orígenes, primero recomendamos apagar la broca y levantarla en el eje "z" para poder comprobar que sí está bien establecido y de esta manera empezar a fabricar.</p>
+            </article>
+
+            <!-- Monofab 6 -->
+            <article class="card searchable">
+                <span class="badge">Agregar archivos</span>
+                <h3>¿Cómo agregar nuestros archivos de fabricación?</h3>
+                <p>Primero que nada, ¿cómo recomendamos nosotros el orden de fabricación de cada una de nuestras capas? Nosotros recomendamos iniciar con las perforaciones que es lo más "minúsculo" de hacer, para posteriormente realizar las etiquetas y las pistas; y finalmente el contorno de nuestra placa. Esto con el objetivo de evitar algún error de que se mueva la placa u otras cosas.</p>
+                <p>Para agregar nuestros archivos lo primero que debemos hacer es, desde la vista general del Vpanel buscar el apartado de "Cut", una vez abierto nos abrirá otra ventana en la cual buscaremos el botón de "Add" para poder agregar nuestros archivos. (Podemos agregar más de un archivo para fabricar a la vez y a su vez debemos saber que en el orden que los insertemos será el orden en que se fabriquen)</p>
+                <img src="Monofab3.png" alt="Foto archivos 1">
+                <img src="Monofab2.png" alt="Foto archivos 2">
+            </article>
+
+            <!-- Monofab 7 -->
+            <article class="card searchable">
+                <span class="badge">Fabricar</span>
+                <h3>La fabricación</h3>
+                <p>Una vez hecha toda la configuración y calibración para empezar a fabricar simplemente debemos pulsar en el botón de output para que empiece a fabricar y estar atentos por cualquier tipo de problema que pueda llegar a suceder, y limpiar una vez que terminemos para tratar de no inhalar el polvo residual que quede.</p>
+                <img src="Monofab2.png" alt="Foto fabricación">
+            </article>
+        </section>
+
+        <!-- ================= PESTAÑA: ACERCA DE ================= -->
+        <section id="acerca" class="tab-content">
+            <div class="card">
+                <h3>Información de Contacto</h3>
+                <img src="WhatsApp Image 2026-06-23 at 8.05.01 PM.jpeg" alt="Foto de Tomás Toledo" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 15px 0; display: block;">
+                <p><strong>Nombre:</strong> Tomás Toledo Fernández</p>
+                <p><strong>Estudiante de:</strong> Ingeniería Mecatrónica, Ibero Puebla</p>
+                <p><strong>Contacto:</strong> 202945@iberopuebla.mx</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- CÓDIGO JAVASCRIPT (INTERACTIVIDAD) -->
+    <script>
+        function switchTab(tabId, btnElement) {
+            // Ocultar todas las secciones
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Quitar la clase active a todos los botones
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Mostrar la sección seleccionada
+            const targetSection = document.getElementById(tabId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            // Marcar el botón presionado como activo
+            if (btnElement) {
+                btnElement.classList.add('active');
+            }
+        }
+
+        // Función para el buscador de tarjetas
+        function filterCards(inputElement) {
+            const input = inputElement.value.toLowerCase();
+            const currentSection = inputElement.closest('.tab-content');
+            const cards = currentSection.querySelectorAll('.searchable');
+
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
