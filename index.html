@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora Escolar - Tomás Toledo</title>
+
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- ESTILOS GENERALES Y DISEÑO --- */
+        :root {
+            --primary-color: #146B3A;
+            --primary-hover: #4338ca;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #146B3A);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* --- BARRA DE NAVEGACIÓN (PESTAÑAS) --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* --- BUSCADOR --- */
+        .search-box {
+            margin-bottom: 1.5rem;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+        }
+
+        /* --- SECCIONES Y PESTAÑAS --- */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- TARJETAS DE PUBLICACIÓN --- */
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .card .date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e0e7ff;
+            color: var(--primary-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .card img {
+            display: block;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>Portafolio Producción Electrónica</h1>
+        <p>Maestro: Javier Osorio Figueroa | Alumno: Tomás Toledo</p>
+    </header>
+
+    <!-- NAVEGACIÓN POR PESTAÑAS -->
+    <nav>
+        <button class="tab-btn active" onclick="switchTab('inicio')">Inicio</button>
+        <button class="tab-btn" onclick="switchTab('kicad')">KiCad</button>
+        <button class="tab-btn" onclick="switchTab('mods')">Mods</button>
+        <button class="tab-btn" onclick="switchTab('monofab')">MonoFab</button>
+        <button class="tab-btn" onclick="switchTab('acerca')">Acerca de mí</button>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <div class="container">
+
+        <!-- PESTAÑA: INICIO -->
+        <section id="inicio" class="tab-content active">
+            <h2>Introducción</h2>
+            <p style="margin-bottom: 1.5rem;">Esta es la página donde documentaré acerca de mi progreso en la materia de producción electrónica.</p>
+            
+            <div class="card">
+                <span class="badge">Producción Electrónica</span>
+                <h3>¿Qué hago en producción electrónica?</h3>
+                <img src="ImagenPlaca.jpg" alt="Foto de placa">
+                <p>La materia de producción electrónica es una materia enfocada en diseñar y fabricar componentes electrónicos desde cero, desde el planteamiento del proyecto hasta la fabricación de placas. Aquí abarco desde la elaboración de esquemáticos y el diseño de placas en software como KiCad o Altium, hasta el uso de herramientas y software especializado para el corte, soldado y ensamblaje de dichas placas.</p>
+            </div>
+        </section>
+
+        <!-- PESTAÑA: KICAD -->
+        <section id="kicad" class="tab-content">
+            <div class="search-box">
+                <input type="text" onkeyup="filterCards(this)" placeholder="🔍 Buscar en KiCad...">
+            </div>
+
+            <!-- KiCad Resumen -->
+            <article class="card searchable">
+                <span class="badge">KiCad</span>
+                <h3>Resumen: ¿Qué es KiCad?</h3>
+                <img src="logokicad.webp" alt="Logo de KiCad">
+                <p>KiCad es un paquete de software de código abierto para la automatización del diseño electrónico (EDA). Los programas permiten la captura de esquemas y el diseño de placas de circuito impreso (PCB) con salida en formato Gerber e IPC-2581 . El paquete funciona en Windows, Linux y macOS y está licenciado bajo la licencia GNU GPL v3 .</p>
+                <span class="date">Fuente: https://www.kicad.org/about/kicad/</span>
+            </article>
+
+            <!-- 2. Menú principal -->
+            <article class="card searchable">
+                <span class="badge">Menu</span>
+                <h3>Menu principal de KiCad</h3>
+                <p>Al iniciar un proyecto de KiCad podemos observar en la barra lateral de KiCad los editores que tenemos disponibles, como lo es el editor de esquemas, el editor de simbolos o el editor de placas.</p>
+                <img src="Imagen1.png" alt="Imagen">
+                <p>Además de eso tambien encontramos los menus usuales de "Archivo" donde podemos encontrar para abrir, guardar o clonar algun documento que tengamos; "Editar"para copiar, pegar o cortar; o "Herramientas" entre otras; como es usual encontrar en cualquier aplicación con creación de archivos.</p>
+            </article>
+
+            <!-- 3. Librería -->
+            <article class="card searchable">
+                <span class="badge">KidCad FabLib</span>
+                <h3>¿Cómo instalar KidCad FabLib?</h3>
+                <img src="Imagen2.png" alt="Imagen">
+                <p>Abrimos el menu de Herramientas buscando el "Administrador de Complementos y Contenido" y lo abrimos, lo cual nos abrira un menu.</p>
+                <img src="Imagen3.png" alt="Imagen">
+                <p>En dicho menu vamos a buscar en el filtro la libreria de "KidCd FabLib" y la instalamos. Una vez instalada vamos a reiniciar el programa para asegurarnos de poder utilizar esta libreria.</p>
+            </article>
+
+            <!-- 4. Editor de esquemas -->
+            <article class="card searchable">
+                <span class="badge">Esquemas</span>
+                <h3>Editor de esquemas</h3>
+                <p>Lo primero que vamos a ocupar es el editor de esquemas el cual podemos abrir desde el menu lateral en el inicio o en la barra de Herramientas en la parte superior.</p>
+                <img src="Imagen4.png" alt="Imagen">
+                <p>Una vez abierto nos desplegara la ventana de la anterior imagen, en donde podremos crear, editar y conectar todos nuestros diagramas para realizar un circuito.</p>
+            </article>
+        
+            <!-- 5. Herramientas de esquemas -->
+            <article class="card searchable">
+                <span class="badge">HerramientasE</span>
+                <h3>Herramientas del editor de esquemas</h3>
+                <img src="Imagen5.png" alt="Imagen">
+                <p>En la barra lateral dentro del editor de esquemás podemos observar diversas herramientas las cuales nos pueden ayudar a identificar e insertar los elementos necesarios para nuestro diagrama</p>
+            </article>
+        
+            <!-- 6. Componentes -->
+            <article class="card searchable">
+                <span class="badge">Componentes</span>
+                <h3>¿Cómo agregar un componente?</h3>
+                <p>La parte más importante del editor de esquemas es para poder agregar los componentes que deseamos utilizar. Esto lo podemos hacer de dos maneras, utilizando el comando de la tecla "A" o pulsando el icono de "Colocar Simbolos" que vimos en la barra lateral del editor de esquemas en la parte anterior. Esto nos abrira la siguiente ventana:</p>
+                <img src="Imagen6.png" alt="Imagen">
+                <p>Una vez abierta esta ventana desde el filtro podremos buscar cualquier componente que deseemos insertar simplemente escribiendolo. Tambien es importante que busquemos insertar los componentes de nuestra libreria que insertamos llamada "PCM_fab"</p>
+                <img src="Imagen7.png" alt="Imagen">
+                <p>Tambien es importante que verifiquemos que el compomnente que deseemos insertar tenga un footprint ya determiando, debido a que es probable que no podamos encontrar facilmente los componentes que no posean un footprint, es lo que se ve a continuación.</p>
+                <img src="Imagen8.png" alt="Imagen">
+            </article>
+        
+            <!-- 7. Editor de placas -->
+            <article class="card searchable">
+                <span class="badge">Placas</span>
+                <h3>Editor de Placas</h3>
+                <img src="Imagen9.png" alt="Imagen">
+                <p>Por otro lado tenemos tambien el editor de placas el cual, al igual que el editor de esquemas, podemos abrir desde el menu lateral en el inicio o en la barra de Herramientas en la parte superior, pero a su vez tambien podemos ingresar desde el editor de esquemas al pulsar el icono señalado en la siguiente imamgen.</p>
+            </article>
+        
+            <!-- 8. Importar componentes -->
+            <article class="card searchable">
+                <span class="badge">Componentes</span>
+                <h3>¿Cómo importar los componentes del editor de esquemas?</h3>
+                <img src="Imagen10.png" alt="Imagen">
+                <p>Al ya tener abierta la pestaña del editor de placas vamos a necesitar insertar los componentes del diagrama que ya creamos con anterioridad. Para esto vamos a buscar el icono de "Actualizar placa desde esquema" el cual nos va a abrir otra ventanita en la cual vamos a picar el boton de "Actualizar placa", con lo que ya tendriamos nuestros componentes inserador en esta"</p>
+            </article>
+        
+            <!-- 9. Herramientas de placas -->
+            <article class="card searchable">
+                <span class="badge">HerramientasP</span>
+                <h3>Herramientas del editor de placas</h3>
+                <p>Una vez que tengamos nuestros componentes en el editor de placas nos vamos a encontrar en la barra lateral derecha diversas herramientas para poder diseñar nuestra placa a nuestro gusto.</p>
+                <img src="Imagen11.png" alt="Imagen">
+                <p>Pero tambien es importante que dependiendo de nos requisitos y limitaciones que tengamos ajustemos las reglas de diseño. Parra poder ajustar estar reglas vamos a pulsar un pequeño menu desplegable en la parte superior izquierda para despues de eso pulsar el apartado de "Editar tamaños predefinidos" lo cual nos abrira una ventana en la cual buscaremos "
