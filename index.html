@@ -665,3 +665,160 @@
             <article class="card searchable">
                 <span class="badge">Entorno</span>
                 <h3>Área de trabajo de Multisim</h3>
+                <img src="ms1.png" alt="Ventana principal de Multisim">
+                <p>Al iniciar Multisim se abre la hoja de trabajo en blanco con su rejilla de puntos y las barras de herramientas superiores para controlar la simulación y gestionar el proyecto.</p>
+            </article>
+
+            <!-- 2. Barra de instrumentos virtuales -->
+            <article class="card searchable">
+                <span class="badge">Instrumentación</span>
+                <h3>Barra lateral de instrumentos virtuales</h3>
+                <img src="ms2.png" alt="Barra de instrumentos de medición">
+                <p>A la derecha de la pantalla tenemos la barra con todos los aparatos de laboratorio virtuales: multímetros, generadores de funciones, osciloscopios y analizadores lógicos listos para conectarse al circuito.</p>
+            </article>
+
+            <!-- 3. Menú de componentes -->
+            <article class="card searchable">
+                <span class="badge">Librería</span>
+                <h3>Búsqueda en la base de datos de componentes</h3>
+                <img src="ms3.png" alt="Ventana Select a Component">
+                <p>Desde el menú de componentes ("Place Basic") accedemos a la librería completa para buscar elementos pasivos como resistencias, capacitores o inductores organizados por familias.</p>
+            </article>
+
+            <!-- 4. Ajuste de valor -->
+            <article class="card searchable">
+                <span class="badge">Propiedades</span>
+                <h3>Configuración del valor de la resistencia</h3>
+                <img src="ms4.png" alt="Propiedades de la resistencia y valor en Ohms">
+                <p>Al hacer doble clic en el componente abrimos la pestaña "Value", donde podemos escribir el valor exacto de resistencia (en Ohms, kΩ, etc.) y definir su tolerancia para el cálculo de la simulación.</p>
+            </article>
+
+            <!-- 5. Etiquetado -->
+            <article class="card searchable">
+                <span class="badge">Identificación</span>
+                <h3>Etiquetado y nombre del componente (RefDes)</h3>
+                <img src="ms5.png" alt="Pestaña Label del componente">
+                <p>En la pestaña "Label" cambiamos el identificador del componente (como R1, R2 o R3) para mantener ordenado el esquema y saber qué elemento estamos midiendo en cada punto.</p>
+            </article>
+
+            <!-- 6. Conexión de terminales -->
+            <article class="card searchable">
+                <span class="badge">Cableado</span>
+                <h3>Interconexión entre componentes</h3>
+                <img src="ms6.png" alt="Cableado entre terminales con puntero en cruz">
+                <p>Al pasar el cursor por los extremos de las resistencias, el cursor cambia a un puntero de cableado con el que podemos trazar las líneas para unir las terminales entre sí.</p>
+            </article>
+
+            <!-- 7. Fuentes de alimentación -->
+            <article class="card searchable">
+                <span class="badge">Alimentación</span>
+                <h3>Selección de fuentes de voltaje y tierra</h3>
+                <img src="ms7.png" alt="Ventana de selección de fuentes y Ground">
+                <p>Desde el icono de fuentes ("Place Source") abrimos la categoría de alimentación para insertar fuentes de corriente continua (DC Power), alterna o la referencia a tierra (Ground).</p>
+            </article>
+
+            <!-- 8. Circuito cerrado con tierra -->
+            <article class="card searchable">
+                <span class="badge">Esquemático</span>
+                <h3>Circuito cerrado con referencia a tierra</h3>
+                <img src="ms8.png" alt="Circuito completo con fuente de 12V y tierra">
+                <p>Terminamos de conectar la fuente de 12V en serie con las resistencias y agregamos la tierra al nodo inferior para que el simulador pueda calcular las caídas de tensión correctamente.</p>
+            </article>
+
+            <!-- 9. Conectar multímetro en el circuito -->
+            <article class="card searchable">
+                <span class="badge">Medición</span>
+                <h3>Colocación del multímetro digital</h3>
+                <img src="ms9.png" alt="Multímetro virtual XMM1 colocado en el lienzo">
+                <p>Seleccionamos el multímetro de la barra lateral y lo arrastramos al lienzo para medir la caída de voltaje en la primera resistencia (R1).</p>
+            </article>
+
+            <!-- 10. Medición en R1 -->
+            <article class="card searchable">
+                <span class="badge">Lectura</span>
+                <h3>Medición de voltaje sobre la primera resistencia</h3>
+                <img src="ms10.png" alt="Pantalla del multímetro marcando 2.164 V">
+                <p>Iniciamos la simulación con el botón verde de "Run" y abrimos la carátula del multímetro: configurado en voltaje continuo (V DC), nos marca 2.164 V sobre la resistencia de 2.2 kΩ.</p>
+            </article>
+
+            <!-- 11. Medición simultánea en R1 y R3 -->
+            <article class="card searchable">
+                <span class="badge">Comprobación</span>
+                <h3>Medición de voltaje en ambas resistencias</h3>
+                <img src="ms11.png" alt="Dos multímetros midiendo voltajes de 2.164V y 9.836V">
+                <p>Conectamos un segundo multímetro (XMM2) en paralelo con R3 (10 kΩ). El primero registra 2.164 V y el segundo 9.836 V, sumando los 12 V totales de la fuente según la ley de voltajes de Kirchhoff.</p>
+            </article>
+
+            <!-- 12. Multímetro de banco Agilent -->
+            <article class="card searchable">
+                <span class="badge">Instrumento de Banco</span>
+                <h3>Simulación con multímetro de banco de alta precisión</h3>
+                <img src="ms12.png" alt="Multímetro Agilent 34401A mostrando 09.83605 VDC">
+                <p>Además de los multímetros básicos, Multisim permite usar modelos de laboratorio reales como el Agilent 34401A, mostrando la lectura con mayor precisión decimal (9.83605 VDC) en su panel digital interactivo.</p>
+            </article>
+        
+            <!-- Conclusión Multisim -->
+            <article class="card searchable">
+                <span class="badge">Conclusión</span>
+                <h3>¿Por qué conviene simular en Multisim antes de fabricar la PCB?</h3>
+                <p>
+                    Implementar simulaciones previas en Multisim resulta fundamental dentro del flujo de diseño electrónico por varias razones :
+                </p>
+                <ul style="margin: 15px 0 15px 25px; line-height: 1.8;">
+                    <li><strong>Prevención de errores y costos:</strong> Permite detectar fallas en el conexionado, valores incorrectos de resistencias o saturaciones de corriente antes de mandar a cortar la placa de cobre o soldar los componentes, evitando el desperdicio de material y componentes dañados.</li>
+                    <li><strong>Verificación rápida sin riesgo:</strong> Los instrumentos virtuales (como multímetros y osciloscopios) facilitan comprobar que las caídas de tensión y las señales coincidan con los cálculos teóricos de manera inmediata y segura.</li>
+                    <li><strong>Integración directa con el diseño físico:</strong> Al comprobar que el circuito funciona correctamente, la información y la lista de conexiones se pueden transferir de forma limpia a entornos de ruteo como KiCad, asegurando que la PCB final sea funcional desde el primer intento.</li>
+                </ul>
+                <span class="date">Validación virtual previa al maquinado</span>
+            </article>
+        </section>
+
+        <!-- ================= PESTAÑA: ACERCA DE MÍ ================= -->
+        <section id="acerca" class="tab-content">
+            <div class="card">
+                <h3>Información de Contacto</h3>
+                <img src="WhatsApp Image 2026-06-23 at 8.05.01 PM.jpeg" alt="Foto de Tomás Toledo" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 15px 0; display: block;">
+                <p><strong>Nombre:</strong> Tomás Toledo Fernández</p>
+                <p><strong>Estudiante de:</strong> Ingeniería Mecatrónica, Ibero Puebla</p>
+                <p><strong>Materia/Grupo:</strong> Producción Electrónica grupo B</p>
+                <p><strong>Contacto:</strong> 202945@iberopuebla.mx</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- CÓDIGO JAVASCRIPT (INTERACTIVIDAD) -->
+    <script>
+        function switchTab(tabId, clickedBtn) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            const targetSection = document.getElementById(tabId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            if (clickedBtn) {
+                clickedBtn.classList.add('active');
+            }
+        }
+
+        function filterCards(inputElement) {
+            const input = inputElement.value.toLowerCase();
+            const currentSection = inputElement.closest('.tab-content');
+            const cards = currentSection.querySelectorAll('.searchable');
+
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
